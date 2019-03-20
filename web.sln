@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web", "web\web.csproj", "{D2511C37-7FB6-434D-8937-DEE1136B35ED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSSMap.OrchardCore", "CSSMap.OrchardCore\CSSMap.OrchardCore.csproj", "{952F8D12-93C7-43A1-963B-6EE607F6AE0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{56308AEE-7A78-4476-B4A4-EFD47DC55C33}"
+	ProjectSection(SolutionItems) = preProject
+		gulpfile.js = gulpfile.js
+		Package.json = Package.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2511C37-7FB6-434D-8937-DEE1136B35ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2511C37-7FB6-434D-8937-DEE1136B35ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2511C37-7FB6-434D-8937-DEE1136B35ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2511C37-7FB6-434D-8937-DEE1136B35ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{952F8D12-93C7-43A1-963B-6EE607F6AE0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{952F8D12-93C7-43A1-963B-6EE607F6AE0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{952F8D12-93C7-43A1-963B-6EE607F6AE0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{952F8D12-93C7-43A1-963B-6EE607F6AE0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC527561-F17F-450D-AE56-52A6AEC986D8}
+	EndGlobalSection
+EndGlobal

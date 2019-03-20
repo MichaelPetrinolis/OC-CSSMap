@@ -1,0 +1,35 @@
+[
+  {
+    "inputs": [ "Assets/cssmap-continents/cssmap-continents/cssmap-continents.css" ],
+    "output": "wwwroot/Styles/cssmap-continents.css"
+  },
+  {
+    "minify": false,
+    "inputs": [ "Assets/cssmap-continents/jquery.cssmap.min.js" ],
+    "output": "wwwroot/Scripts/jquery.cssmap.min.js"
+  },
+  {
+    "inputs": [ "Assets/cssmap-continents/cssmap-continents/cssmap-themes.css" ],
+    "output": "wwwroot/Styles/cssmap-themes.css"
+  },
+  {
+    "copy": true,
+    "inputs": [ "Assets/cssmap-continents/cssmap-continents/blue/**/*.*" ],
+    "output": "wwwroot/Styles/blue/@"
+  },
+  {
+    "copy": true,
+    "inputs": [ "Assets/cssmap-continents/cssmap-continents/dark/**/*.*" ],
+    "output": "wwwroot/Styles/dark/@"
+  },
+  {
+    "copy": true,
+    "inputs": [ "Assets/cssmap-continents/cssmap-continents/default/**/*.*" ],
+    "output": "wwwroot/Styles/default/@"
+  },
+  {
+    "copy": true,
+    "inputs": [ "Assets/cssmap-continents/cssmap-continents/vintage/**/*" ],
+    "output": "wwwroot/Styles/vintage/@"
+  }
+]

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using OrchardCore.Logging;
 using OrchardCore.Modules;
 
-namespace web
+namespace CSSMap.web
 {
     public class Program
     {

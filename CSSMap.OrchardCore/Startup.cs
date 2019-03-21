@@ -1,8 +1,7 @@
-using System;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
+using OrchardCore.Data.Migration;
 using OrchardCore.Modules;
+using OrchardCore.ResourceManagement;
 
 namespace CSSMap.OrchardCore
 {
@@ -10,16 +9,8 @@ namespace CSSMap.OrchardCore
     {
         public override void ConfigureServices(IServiceCollection services)
         {
-        }
-
-        public override void Configure(IApplicationBuilder builder, IRouteBuilder routes, IServiceProvider serviceProvider)
-        {
-            routes.MapAreaRoute(
-                name: "Home",
-                areaName: "CSSMap.OrchardCore",
-                template: "Home/Index",
-                defaults: new { controller = "Home", action = "Index" }
-            );
+            services.AddScoped<IResourceManifestProvider, ResourceManifest>();
+            services.AddScoped<IDataMigration, Migrations>();
         }
     }
 }

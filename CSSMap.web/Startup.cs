@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
 
-namespace web
+namespace CSSMap.web
 {
     public class Startup
     {

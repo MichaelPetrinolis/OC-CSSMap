@@ -1,0 +1,22 @@
+﻿{% capture stylename %}cssmap-{{Model.ContentItem.Content.CSSMap.Map.Text}}{% endcapture %}
+{% style name:stylename %}
+
+<article class="{{ Model.Classes | join: " " }}">
+	<div id="{{ Model.ContentItem.Content.CSSMap.Id.Text }}" style="display:none;">
+		<ul class="{{ Model.ContentItem.Content.CSSMap.Map.Text }}" >
+			{{ Model.ContentItem.Content.CSSMap.Markup.Html | raw }}
+		</ul>
+	</div>
+</article>
+
+{% script name:"CSSMap", at:"Foot" %}
+
+{% scriptblock at: "Foot" %}
+$(document).ready(function(){
+$("#{{ Model.ContentItem.Content.CSSMap.Id.Text }}").CSSMap({
+	"size": 1280,
+	"mapStyle": "{{ Model.ContentItem.Content.CSSMap.Style.Text }}"
+	});
+$("#{{ Model.ContentItem.Content.CSSMap.Id.Text }}").css('display','block')
+});
+{% endscriptblock %}

@@ -1,8 +1,4 @@
-﻿using OrchardCore.ContentManagement.Metadata.Settings;
-using OrchardCore.ContentManagement.Metadata;
-using OrchardCore.Data.Migration;
-using OrchardCore.ContentManagement;
-using System;
+﻿using OrchardCore.Data.Migration;
 using OrchardCore.Recipes.Services;
 using System.Threading.Tasks;
 
@@ -21,6 +17,12 @@ namespace CSSMap.OrchardCore
         {
             await _recipeMigrator.ExecuteAsync("migration.recipe.json", this);
             return 1;
+        }
+
+        public async Task<int> UpdateFrom1Async()
+        {
+            await _recipeMigrator.ExecuteAsync("migrationV2.recipe.json", this);
+            return 2;
         }
     }
 }

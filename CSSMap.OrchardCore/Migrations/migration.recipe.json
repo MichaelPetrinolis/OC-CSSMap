@@ -1,0 +1,162 @@
+{
+  "name": "",
+  "displayName": "",
+  "description": "",
+  "author": "",
+  "website": "",
+  "version": "",
+  "issetuprecipe": false,
+  "categories": "",
+  "tags": [],
+  "steps": [
+    {
+      "name": "ContentDefinition",
+      "ContentTypes": [
+        {
+          "Name": "cssmap",
+          "DisplayName": "CSSMap",
+          "Settings": {
+            "Creatable": "False",
+            "Draftable": "True",
+            "Versionable": "True",
+            "Listable": "False",
+            "Securable": "True",
+            "Stereotype": "Widget"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "cssmap",
+              "Name": "cssmap",
+              "Settings": {
+                "Position": "0"
+              }
+            }
+          ]
+        }
+      ],
+      "ContentParts": [
+        {
+          "Name": "cssmap",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "Map",
+              "Settings": {
+                "DisplayName": "Map",
+                "Editor": "PredefinedList",
+                "DisplayMode": null,
+                "Hint": null,
+                "Required": true,
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "Europe",
+                      "value": "cssmap-europe"
+                    },
+                    {
+                      "name": "Continents",
+                      "value": "cssmap-continents"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": "cssmap-continents"
+                },
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "1"
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Id",
+              "Settings": {
+                "DisplayName": "Id",
+                "Editor": null,
+                "DisplayMode": null,
+                "Hint": "The id of the map",
+                "Required": true,
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "0"
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Style",
+              "Settings": {
+                "DisplayName": "Style",
+                "Editor": "PredefinedList",
+                "DisplayMode": null,
+                "Hint": null,
+                "Required": false,
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "Default",
+                      "value": "default"
+                    },
+                    {
+                      "name": "Blue",
+                      "value": "Blue"
+                    },
+                    {
+                      "name": "Dark",
+                      "value": "dark"
+                    },
+                    {
+                      "name": "Vintage",
+                      "value": "vintage"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": "default"
+                },
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "2"
+              }
+            },
+            {
+              "FieldName": "HtmlField",
+              "Name": "Markup",
+              "Settings": {
+                "DisplayName": "Markup",
+                "Editor": "Multiline",
+                "DisplayMode": null,
+                "Hint": "provide a list of <li> that will be displayed in the map. \r\neg.\r\n  <li class=\"c1\"><a href=\"#africa\">Africa</a></li>\r\n  <li class=\"c4\"><a href=\"#europe\">Europe</a></li>\r\n\r\n",
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "3"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

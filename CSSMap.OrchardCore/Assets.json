@@ -1,6 +1,6 @@
 [
   {
-    "inputs": [ "Assets/cssmap-continents/cssmap-continents/cssmap-continents.css" ],
+    "inputs": [ "Assets/cssmap-continents/cssmap-continents/cssmap-continents.css", "Assets/fix-bs.scss" ],
     "output": "wwwroot/Styles/cssmap-continents.css"
   },
   {

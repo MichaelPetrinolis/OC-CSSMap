@@ -13,14 +13,17 @@ namespace CSSMap.OrchardCore
                 .SetDependencies("jQuery")
                 .SetUrl("~/CSSMap.OrchardCore/Scripts/jquery.cssmap.min.js")
                 .SetCdn("https://cssmapsplugin.com/5/jquery.cssmap.min.js")
-                .SetVersion("5.5.4")
-                ;
+                .SetVersion("5.5.4");
 
             manifest
                 .DefineStyle("cssmap-continents")
                 .SetUrl("~/CSSMap.OrchardCore/Styles/cssmap-continents.min.css", "~/CSSMap.OrchardCore/Styles/cssmap-continents.css")
-                .SetVersion("5.5.4")
-                ;
+                .SetVersion("5.5.4");
+
+            manifest
+                .DefineStyle("cssmap-europe")
+                .SetUrl("~/CSSMap.OrchardCore/Styles/cssmap-europe.min.css", "~/CSSMap.OrchardCore/Styles/cssmap-europe.css")
+                .SetVersion("5.5.4");
         }
     }
 }

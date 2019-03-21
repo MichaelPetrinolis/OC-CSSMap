@@ -1,35 +1,36 @@
 [
   {
-    "inputs": [ "Assets/cssmap-continents/cssmap-continents/cssmap-continents.css", "Assets/fix-bs.scss" ],
+    "minify": false,
+    "inputs": [ "Assets/jquery.cssmap.min.js" ],
+    "output": "wwwroot/Scripts/jquery.cssmap.min.js"
+  },
+
+  {
+    "inputs": [ "Assets/cssmap-continents/cssmap-continents.css" ],
     "output": "wwwroot/Styles/cssmap-continents.css"
   },
   {
-    "minify": false,
-    "inputs": [ "Assets/cssmap-continents/jquery.cssmap.min.js" ],
-    "output": "wwwroot/Scripts/jquery.cssmap.min.js"
-  },
-  {
-    "inputs": [ "Assets/cssmap-continents/cssmap-continents/cssmap-themes.css" ],
+    "inputs": [ "Assets/cssmap-continents/cssmap-themes.css" ],
     "output": "wwwroot/Styles/cssmap-themes.css"
   },
   {
     "copy": true,
-    "inputs": [ "Assets/cssmap-continents/cssmap-continents/blue/**/*.*" ],
-    "output": "wwwroot/Styles/blue/@"
+    "inputs": [ "Assets/cssmap-continents/**/*" ],
+    "output": "wwwroot/Styles/@"
+  },
+
+  {
+    "inputs": [ "Assets/cssmap-europe/cssmap-europe.css" ],
+    "output": "wwwroot/Styles/cssmap-europe.css"
+  },
+  {
+    "inputs": [ "Assets/cssmap-europe/cssmap-themes.css" ],
+    "output": "wwwroot/Styles/cssmap-themes.css"
   },
   {
     "copy": true,
-    "inputs": [ "Assets/cssmap-continents/cssmap-continents/dark/**/*.*" ],
-    "output": "wwwroot/Styles/dark/@"
-  },
-  {
-    "copy": true,
-    "inputs": [ "Assets/cssmap-continents/cssmap-continents/default/**/*.*" ],
-    "output": "wwwroot/Styles/default/@"
-  },
-  {
-    "copy": true,
-    "inputs": [ "Assets/cssmap-continents/cssmap-continents/vintage/**/*" ],
-    "output": "wwwroot/Styles/vintage/@"
+    "inputs": [ "Assets/cssmap-europe/**/*" ],
+    "output": "wwwroot/Styles/@"
   }
+
 ]

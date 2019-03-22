@@ -1,0 +1,422 @@
+{
+  "Id": 0,
+  "ContentTypeDefinitionRecords": [
+    {
+      "Name": "Menu",
+      "DisplayName": "Menu",
+      "Settings": {
+        "Draftable": "True",
+        "Versionable": "True",
+        "Listable": "True"
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "Position": "0"
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "Position": "1",
+            "AliasPartSettings": {
+              "Pattern": "{{ ContentItem | display_text | slugify }}"
+            }
+          }
+        },
+        {
+          "PartName": "MenuPart",
+          "Name": "MenuPart",
+          "Settings": {
+            "Position": "2"
+          }
+        },
+        {
+          "PartName": "MenuItemsListPart",
+          "Name": "MenuItemsListPart",
+          "Settings": {
+            "Position": "3"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "LinkMenuItem",
+      "DisplayName": "Link Menu Item",
+      "Settings": {
+        "Stereotype": "MenuItem"
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "LinkMenuItemPart",
+          "Name": "LinkMenuItemPart",
+          "Settings": {
+            "Position": "0"
+          }
+        },
+        {
+          "PartName": "LinkMenuItem",
+          "Name": "LinkMenuItem",
+          "Settings": {
+            "Position": "1"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CSSMap",
+      "DisplayName": "CSSMap",
+      "Settings": {
+        "Creatable": "False",
+        "Draftable": "True",
+        "Versionable": "True",
+        "Listable": "False",
+        "Securable": "True",
+        "Stereotype": "Widget"
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "CSSMap",
+          "Name": "CSSMap",
+          "Settings": {
+            "Position": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Page",
+      "DisplayName": "Page",
+      "Settings": {
+        "Creatable": "True",
+        "Draftable": "True",
+        "Versionable": "True",
+        "Listable": "True",
+        "Securable": "True",
+        "Stereotype": null
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Page",
+          "Name": "Page",
+          "Settings": {
+            "Position": "3"
+          }
+        },
+        {
+          "PartName": "AutoroutePart",
+          "Name": "AutoroutePart",
+          "Settings": {
+            "Position": "1",
+            "DisplayName": null,
+            "Description": null,
+            "Editor": null,
+            "Pattern": "{{displaytext}}",
+            "AllowCustomPath": "True",
+            "AllowUpdatePath": "True",
+            "ShowHomepageOption": "True",
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "FlowPart",
+          "Name": "FlowPart",
+          "Settings": {
+            "Position": "2"
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "Position": "0"
+          }
+        }
+      ]
+    }
+  ],
+  "ContentPartDefinitionRecords": [
+    {
+      "Name": "CommonPart",
+      "Settings": {
+        "Attachable": "True",
+        "Description": "Provides an editor for the common properties of a content item."
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "LiquidPart",
+      "Settings": {
+        "Attachable": "True",
+        "Description": "Provides a Liquid formatted body for your content item."
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "WidgetsListPart",
+      "Settings": {
+        "Attachable": "True",
+        "Description": "Provides a way to add widgets per content items."
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "FlowPart",
+      "Settings": {
+        "Attachable": "True",
+        "Description": "Provides a customizable body for your content item."
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "BagPart",
+      "Settings": {
+        "Attachable": "True",
+        "Reusable": "True",
+        "Description": "Provides a collection behavior for your content item."
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "AliasPart",
+      "Settings": {
+        "Attachable": "True",
+        "Description": "Provides a way to define custom aliases for content items."
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "AutoroutePart",
+      "Settings": {
+        "Attachable": "True",
+        "Description": "Provides a custom url for your content item."
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "HtmlBodyPart",
+      "Settings": {
+        "Attachable": "True",
+        "Description": "Provides an HTML Body for your content item."
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "ListPart",
+      "Settings": {
+        "Attachable": "True",
+        "Description": "Add a list behavior."
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "MarkdownBodyPart",
+      "Settings": {
+        "Attachable": "True",
+        "Description": "Provides a Markdown formatted body for your content item."
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "TitlePart",
+      "Settings": {
+        "Attachable": "True",
+        "Description": "Provides a Title for your content item.",
+        "DefaultPosition": "0"
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "MenuPart",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "MenuItemPart",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "LinkMenuItemPart",
+      "Settings": {
+        "Attachable": true,
+        "Description": "Provides a menu link behavior for your content item."
+      },
+      "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "CSSMap",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "Map",
+          "Settings": {
+            "DisplayName": "Map",
+            "Editor": "PredefinedList",
+            "DisplayMode": null,
+            "Hint": "enter the name of the map you want to use.\r\neg. Europe,continents etc. \r\nFor paid maps, you have to register a resource with that name.",
+            "Required": true,
+            "TextFieldPredefinedListEditorSettings": {
+              "Options": [
+                {
+                  "name": "Continents",
+                  "value": "continents"
+                },
+                {
+                  "name": "Europe",
+                  "value": "europe"
+                }
+              ],
+              "Editor": 1,
+              "DefaultValue": null
+            },
+            "ContentIndexSettings": {
+              "Included": false,
+              "Stored": false,
+              "Analyzed": false,
+              "Sanitized": false,
+              "Tokenized": false,
+              "Template": null
+            },
+            "Position": "2"
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Id",
+          "Settings": {
+            "DisplayName": "Id",
+            "Editor": null,
+            "DisplayMode": null,
+            "Hint": "The id of the map",
+            "Required": true,
+            "ContentIndexSettings": {
+              "Included": false,
+              "Stored": false,
+              "Analyzed": false,
+              "Sanitized": false,
+              "Tokenized": false,
+              "Template": null
+            },
+            "Position": "0"
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "MapOptions",
+          "Settings": {
+            "DisplayName": "Map Options",
+            "Editor": "TextArea",
+            "DisplayMode": null,
+            "Hint": "Extra Map options.\r\neg.\r\ntooltips : \"floating\",\r\nresponsive: true,\r\nmapStyle: \"vintage\",\r\nactivateOnLoad: true",
+            "Required": false,
+            "Position": "5"
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Size",
+          "Settings": {
+            "DisplayName": "Size",
+            "Editor": "PredefinedList",
+            "DisplayMode": null,
+            "Hint": "The size of the map. Select one from the predefined values",
+            "Required": true,
+            "TextFieldPredefinedListEditorSettings": {
+              "Options": [
+                {
+                  "name": "250 px",
+                  "value": "250"
+                },
+                {
+                  "name": "320 px",
+                  "value": "320"
+                },
+                {
+                  "name": "430 px",
+                  "value": "430"
+                },
+                {
+                  "name": "540 px",
+                  "value": "540"
+                },
+                {
+                  "name": "650 px",
+                  "value": "650"
+                },
+                {
+                  "name": "750 px",
+                  "value": "750"
+                },
+                {
+                  "name": "850 px",
+                  "value": "850"
+                },
+                {
+                  "name": "960 px",
+                  "value": "960"
+                },
+                {
+                  "name": "1280 px",
+                  "value": "1280"
+                },
+                {
+                  "name": "1450 px",
+                  "value": "1450"
+                }
+              ],
+              "Editor": 1,
+              "DefaultValue": "1450"
+            },
+            "Position": "1"
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Markup",
+          "Settings": {
+            "DisplayName": "Markup",
+            "Editor": "TextArea",
+            "DisplayMode": null,
+            "Hint": null,
+            "Required": true,
+            "ContentIndexSettings": {
+              "Included": false,
+              "Stored": false,
+              "Analyzed": false,
+              "Sanitized": false,
+              "Tokenized": false,
+              "Template": null
+            },
+            "Position": "3"
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "AdditionalMarkup",
+          "Settings": {
+            "DisplayName": "Additional Markup",
+            "Editor": "TextArea",
+            "DisplayMode": null,
+            "Hint": null,
+            "Required": false,
+            "ContentIndexSettings": {
+              "Included": false,
+              "Stored": false,
+              "Analyzed": false,
+              "Sanitized": false,
+              "Tokenized": false,
+              "Template": null
+            },
+            "Position": "4"
+          }
+        }
+      ]
+    }
+  ],
+  "Serial": 97
+}

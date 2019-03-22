@@ -19,10 +19,10 @@ namespace CSSMap.OrchardCore
             return 1;
         }
 
-        public async Task<int> UpdateFrom1Async()
-        {
-            await _recipeMigrator.ExecuteAsync("migrationV2.recipe.json", this);
-            return 2;
-        }
+        //public async Task<int> UpdateFrom1Async()
+        //{
+        //    await _recipeMigrator.ExecuteAsync("migrationV2.recipe.json", this);
+        //    return 2;
+        //}
     }
 }

@@ -5,15 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0-beta3-70948" />
-    <PackageReference Include="OrchardCore.ContentManagement" Version="1.0.0-beta3-70948" />
-    <PackageReference Include="OrchardCore.ContentTypes.Abstractions" Version="1.0.0-beta3-70948" />
-    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.0.0-beta3-70948" />
+    <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0-beta3-70967" />
+    <PackageReference Include="OrchardCore.ContentManagement" Version="1.0.0-beta3-70967" />
+    <PackageReference Include="OrchardCore.ContentTypes.Abstractions" Version="1.0.0-beta3-70967" />
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.0.0-beta3-70967" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-    <PackageReference Include="OrchardCore.ResourceManagement.Abstractions" Version="1.0.0-beta3-70959" />
+    <PackageReference Include="OrchardCore.ResourceManagement.Abstractions" Version="1.0.0-beta3-70967" />
   </ItemGroup>
 
   <ItemGroup>

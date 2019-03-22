@@ -1,19 +1,21 @@
 ﻿{% capture stylename %}cssmap-{{Model.ContentItem.Content.CSSMap.Map.Text}}{% endcapture %}
 {% style name:stylename %}
 
-<div class="d-block">
-	<section class="{{ Model.Classes | join: " " }}">
+<div class="d-flex flex-column">
+	<div class="{{ Model.Classes | join: " " }}">
 		<div id="{{ Model.ContentItem.Content.CSSMap.Id.Text }}" style="display:none;">
 			<ul class="{{ Model.ContentItem.Content.CSSMap.Map.Text }}" >
-				{{ Model.ContentItem.Content.CSSMap.Markup.Html | raw }}
+				{{ Model.ContentItem.Content.CSSMap.Markup.Text | raw }}
 			</ul>
 		</div>
-	{%if Model.ContentItem.Content.CSSMap.AdditionalMarkup.Html.size > 0 %}
-		<ul class="{{ Model.ContentItem.Content.CSSMap.Map.Text }}" >
-			{{ Model.ContentItem.Content.CSSMap.Markup.Html | raw }}
-		</ul>
-	{%endif%}
-	</section>
+		{%if Model.ContentItem.Content.CSSMap.AdditionalMarkup.Text.size > 0 %}
+			<div id="{{ Model.ContentItem.Content.CSSMap.Id.Text }}-additional">
+				<ul>
+					{{ Model.ContentItem.Content.CSSMap.AdditionalMarkup.Text | raw }}
+				</ul>
+			</div>
+		{%endif%}
+	</div>
 </div>
 {% script name:"CSSMap", at:"Foot" %}
 

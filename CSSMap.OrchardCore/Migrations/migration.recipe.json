@@ -13,8 +13,8 @@
       "name": "ContentDefinition",
       "ContentTypes": [
         {
-          "Name": "CSSMap",
-          "DisplayName": "CSSMap",
+          "Name": "cssmap",
+          "DisplayName": "cssmap",
           "Settings": {
             "Creatable": "False",
             "Draftable": "True",
@@ -25,8 +25,8 @@
           },
           "ContentTypePartDefinitionRecords": [
             {
-              "PartName": "CSSMap",
-              "Name": "CSSMap",
+              "PartName": "cssmap",
+              "Name": "cssmap",
               "Settings": {
                 "Position": "0"
               }
@@ -36,7 +36,7 @@
       ],
       "ContentParts": [
         {
-          "Name": "CSSMap",
+          "Name": "cssmap",
           "Settings": {},
           "ContentPartFieldDefinitionRecords": [
             {
@@ -94,7 +94,7 @@
               }
             },
             {
-              "FieldName": "HtmlField",
+              "FieldName": "TextField",
               "Name": "Markup",
               "Settings": {
                 "DisplayName": "Markup",
@@ -183,7 +183,7 @@
               }
             },
             {
-              "FieldName": "HtmlField",
+              "FieldName": "TextField",
               "Name": "AdditionalMarkup",
               "Settings": {
                 "DisplayName": "Additional Markup",

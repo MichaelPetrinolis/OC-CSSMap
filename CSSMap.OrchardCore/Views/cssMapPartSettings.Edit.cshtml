@@ -12,12 +12,39 @@
 </fieldset>
 
 
-<fieldset class="form-group row">
+<fieldset class="form-group row" asp-validation-class-for="Markup">
     <div class="col-lg">
         <label asp-for="Markup">@T["Markup"]</label>
         <textarea asp-for="Markup" class="form-control content-preview-text" rows="10"></textarea>
+        <span asp-validation-for="Markup"></span>
         <span class="hint">@T["The default markup used to render the map."]</span>
     </div>
 </fieldset>
 
+<fieldset class="form-group" asp-validation-class-for="Sizes">
+    <label asp-for="Sizes">@T["Supported Sizes"]</label>
+    <div class="input-group">
+        <input asp-for="Sizes" class="form-control" />
+        <span asp-validation-for="Sizes"></span>
+    </div>
+    <span class="hint">@T["Comma seperated list of valid map sizes"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="StylesheetName">
+    <label asp-for="StylesheetName">@T["Resource name to load"]</label>
+    <div class="input-group">
+        <input asp-for="StylesheetName" class="form-control" />
+        <span asp-validation-for="StylesheetName"></span>
+    </div>
+    <span class="hint">@T["Set the resource name to load"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="StylesheetUrl">
+    <label asp-for="StylesheetUrl">@T["Set the url of the stylesheet to load"]</label>
+    <div class="input-group">
+        <input asp-for="StylesheetUrl" class="form-control" />
+        <span asp-validation-for="StylesheetUrl"></span>
+    </div>
+    <span class="hint">@T["If a named resource is not registered, use this propertyu to load a custom css"]</span>
+</fieldset>
 

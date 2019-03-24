@@ -24,16 +24,16 @@ namespace CSSMap.OrchardCore
                 .Attachable()
                 .WithDescription("Provides a cssmap part to create map widgets."));
 
-            //await _recipeMigrator.ExecuteAsync("migration.recipe.json", this);
+            await _recipeMigrator.ExecuteAsync("migration.recipe.json", this);
             return await Task.FromResult(1);
         }
 
-        public async Task<int> UpdateFrom1Async()
-        {
-            _contentDefinitionManager.AlterPartDefinition(nameof(cssMapPart), builder => builder
-                .Attachable()
-                .WithDescription("Provides a cssmap part to create map widgets."));
-            return await Task.FromResult(2);
-        }
+        //public async Task<int> UpdateFrom1Async()
+        //{
+        //    _contentDefinitionManager.AlterPartDefinition(nameof(cssMapPart), builder => builder
+        //        .Attachable()
+        //        .WithDescription("Provides a cssmap part to create map widgets."));
+        //    return await Task.FromResult(2);
+        //}
     }
 }

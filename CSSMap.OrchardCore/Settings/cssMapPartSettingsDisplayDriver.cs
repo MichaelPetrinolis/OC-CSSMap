@@ -1,7 +1,11 @@
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using CSSMap.OrchardCore.Models;
 using CSSMap.OrchardCore.ViewModels;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.Extensions.Localization;
+using Newtonsoft.Json.Linq;
 using OrchardCore.ContentManagement.Metadata.Models;
 using OrchardCore.ContentTypes.Editors;
 using OrchardCore.DisplayManagement.ModelBinding;
@@ -11,6 +15,13 @@ namespace cssMap.OrchardCore.Settings
 {
     public class cssMapPartSettingsDisplayDriver : ContentTypePartDefinitionDisplayDriver
     {
+        private readonly IStringLocalizer<cssMapPartSettingsDisplayDriver> T;
+
+        public cssMapPartSettingsDisplayDriver(IStringLocalizer<cssMapPartSettingsDisplayDriver> localizer)
+        {
+            T = localizer;
+        }
+
         public override IDisplayResult Edit(ContentTypePartDefinition contentTypePartDefinition, IUpdateModel updater)
         {
             if (!String.Equals(nameof(cssMapPart), contentTypePartDefinition.PartDefinition.Name, StringComparison.Ordinal))
@@ -20,13 +31,13 @@ namespace cssMap.OrchardCore.Settings
 
             return Initialize<cssMapPartSettingsViewModel>("cssMapPartSettings_Edit", model =>
             {
-                var settings = contentTypePartDefinition.Settings.ToObject<cssMapPartSettings>();
+                model.cssMapPartSettings = GetSettings(contentTypePartDefinition);
+                model.Map = model.cssMapPartSettings.Map;
+                model.Markup = model.cssMapPartSettings.Markup;
+                model.Sizes = model.cssMapPartSettings.Sizes == null ? null : string.Join(",", model.cssMapPartSettings.Sizes);
+                model.StylesheetName = model.cssMapPartSettings.StylesheetName;
+                model.StylesheetUrl = model.cssMapPartSettings.StylesheetUrl;
 
-                model.Map = settings.Map;
-                model.Markup = settings.Markup;
-                model.Sizes = settings.Sizes == null ? null : string.Join(",", settings?.Sizes);
-
-                model.cssMapPartSettings = settings;
             }).Location("Content");
         }
 
@@ -42,13 +53,55 @@ namespace cssMap.OrchardCore.Settings
             await context.Updater.TryUpdateModelAsync(model, Prefix,
                 m => m.Map,
                 m => m.Markup,
-                m => m.Sizes);
+                m => m.Sizes,
+                m => m.StylesheetName,
+                m => m.StylesheetUrl);
 
-            context.Builder.WithSetting(nameof(cssMapPartSettings.Map), model.Map);
-            context.Builder.WithSetting(nameof(cssMapPartSettings.Markup), model.Markup);
-            context.Builder.WithSetting(nameof(cssMapPartSettings.Sizes), model.Sizes);
 
+            int[] sizes = new int[0];
+
+            if (!String.IsNullOrEmpty(model.Sizes))
+            {
+                sizes = model.Sizes.Split(',').Select(c => Convert.ToInt32(c)).Where(i => i > 0).ToArray();
+                model.Sizes = string.Join(",", sizes);
+            }
+
+            if (string.IsNullOrWhiteSpace(model.Map))
+            {
+                context.Updater.ModelState.AddModelError(nameof(model.Map), T["You must set an Id for the map"]);
+            }
+
+            if (string.IsNullOrEmpty(model.Sizes))
+            {
+                context.Updater.ModelState.AddModelError(nameof(model.Sizes), T["You must provide a list of sizes the map supports."]);
+            }
+
+            if (string.IsNullOrEmpty(string.Concat(model.StylesheetName, model.StylesheetUrl)))
+            {
+                context.Updater.ModelState.AddModelError(nameof(model.Sizes), T["You must provide a resource name or a url to load the stylesheet of the map. If both defined, the resource name is used"]);
+            }
+
+            if (context.Updater.ModelState.ValidationState == ModelValidationState.Valid)
+            {
+                model.cssMapPartSettings = new cssMapPartSettings()
+                {
+                    Map = model.Map,
+                    Markup = model.Markup,
+                    Sizes = sizes,
+                    StylesheetName = model.StylesheetName,
+                    StylesheetUrl = string.IsNullOrWhiteSpace(model.StylesheetUrl) ? null : new Microsoft.AspNetCore.Http.PathString(model.StylesheetUrl)
+                };
+                context.Builder.WithSettings(model.cssMapPartSettings);
+            }
             return Edit(contentTypePartDefinition, context.Updater);
+        }
+        private cssMapPartSettings GetSettings(ContentTypePartDefinition contentTypePartDefinition)
+        {
+            JToken settings;
+            if (contentTypePartDefinition.Settings.TryGetValue(nameof(cssMapPartSettings), out settings))
+                return settings.ToObject<cssMapPartSettings>();
+            else
+                return new cssMapPartSettings();
         }
     }
 }

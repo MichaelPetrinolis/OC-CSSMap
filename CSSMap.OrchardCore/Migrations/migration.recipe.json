@@ -1,0 +1,320 @@
+﻿{
+  "name": "",
+  "displayName": "",
+  "description": "",
+  "author": "",
+  "website": "",
+  "version": "",
+  "issetuprecipe": false,
+  "categories": "",
+  "tags": [],
+  "steps": [
+    {
+      "name": "ContentDefinition",
+      "ContentTypes": [
+        {
+          "Name": "EuropeMap",
+          "DisplayName": "Europe Map",
+          "Settings": {
+            "Creatable": "False",
+            "Draftable": "True",
+            "Versionable": "True",
+            "Listable": "False",
+            "Securable": "True",
+            "Stereotype": "Widget"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "EuropeMap",
+              "Name": "EuropeMap",
+              "Settings": {
+                "Position": "0"
+              }
+            },
+            {
+              "PartName": "cssMapPart",
+              "Name": "cssMapPart",
+              "Settings": {
+                "DisplayName": null,
+                "Description": null,
+                "Editor": null,
+                "cssMapPartSettings": {
+                  "Sizes": [
+                    250,
+                    320,
+                    430,
+                    540,
+                    650,
+                    750,
+                    850,
+                    960,
+                    1280,
+                    1450
+                  ],
+                  "Markup": "  <li class=\"eu1\"><a href=\"#albania\">Albania</a></li>\r\n  <li class=\"eu2\"><a href=\"#andorra\">Andorra</a></li>\r\n  <li class=\"eu3\"><a href=\"#austria\">Austria</a></li>\r\n  <li class=\"eu4\"><a href=\"#belarus\">Belarus</a></li>\r\n  <li class=\"eu5\"><a href=\"#belgium\">Belgium</a></li>\r\n  <li class=\"eu6\"><a href=\"#bosnia-and-herzegovina\">Bosnia and Herzegovina</a></li>\r\n  <li class=\"eu7\"><a href=\"#bulgaria\">Bulgaria</a></li>\r\n  <li class=\"eu8\"><a href=\"#croatia\">Croatia</a></li>\r\n  <li class=\"eu9\"><a href=\"#cyprus\">Cyprus</a></li>\r\n  <li class=\"eu10\"><a href=\"#czech-republic\">Czech Republic</a></li>\r\n  <li class=\"eu11\"><a href=\"#denmark\">Denmark</a></li>\r\n  <li class=\"eu12\"><a href=\"#estonia\">Estonia</a></li>\r\n  <li class=\"eu13\"><a href=\"#france\">France</a></li>\r\n  <li class=\"eu14\"><a href=\"#finland\">Finland</a></li>\r\n  <li class=\"eu15\"><a href=\"#georgia\">Georgia</a></li>\r\n  <li class=\"eu16\"><a href=\"#germany\">Germany</a></li>\r\n  <li class=\"eu17\"><a href=\"#greece\">Greece</a></li>\r\n  <li class=\"eu18\"><a href=\"#hungary\">Hungary</a></li>\r\n  <li class=\"eu19\"><a href=\"#iceland\">Iceland</a></li>\r\n  <li class=\"eu20\"><a href=\"#ireland\">Ireland</a></li>\r\n  <li class=\"eu21\"><a href=\"#san-marino\">San Marino</a></li>\r\n  <li class=\"eu22\"><a href=\"#italy\">Italy</a></li>\r\n  <li class=\"eu23\"><a href=\"#kosovo\">Kosovo</a></li>\r\n  <li class=\"eu24\"><a href=\"#latvia\">Latvia</a></li>\r\n  <li class=\"eu25\"><a href=\"#liechtenstein\">Liechtenstein</a></li>\r\n  <li class=\"eu26\"><a href=\"#lithuania\">Lithuania</a></li>\r\n  <li class=\"eu27\"><a href=\"#luxembourg\">Luxembourg</a></li>\r\n  <li class=\"eu28\"><a href=\"#macedonia\">Macedonia <abbr title=\"The Former Yugoslav Republic of Macedonia\">(F.Y.R.O.M.)</abbr></a></li>\r\n  <li class=\"eu29\"><a href=\"#malta\">Malta</a></li>\r\n  <li class=\"eu30\"><a href=\"#moldova\">Moldova</a></li>\r\n  <li class=\"eu31\"><a href=\"#monaco\">Monaco</a></li>\r\n  <li class=\"eu32\"><a href=\"#montenegro\">Montenegro</a></li>\r\n  <li class=\"eu33\"><a href=\"#netherlands\">Netherlands</a></li>\r\n  <li class=\"eu34\"><a href=\"#norway\">Norway</a></li>\r\n  <li class=\"eu35\"><a href=\"#poland\">Poland</a></li>\r\n  <li class=\"eu36\"><a href=\"#portugal\">Portugal</a></li>\r\n  <li class=\"eu37\"><a href=\"#romania\">Romania</a></li>\r\n  <li class=\"eu38\"><a href=\"#russian-federation\">Russian Federation</a></li>\r\n  <li class=\"eu39\"><a href=\"#serbia\">Serbia</a></li>\r\n  <li class=\"eu40\"><a href=\"#slovakia\">Slovakia</a></li>\r\n  <li class=\"eu41\"><a href=\"#slovenia\">Slovenia</a></li>\r\n  <li class=\"eu42\"><a href=\"#spain\">Spain</a></li>\r\n  <li class=\"eu43\"><a href=\"#sweden\">Sweden</a></li>\r\n  <li class=\"eu44\"><a href=\"#switzerland\">Switzerland</a></li>\r\n  <li class=\"eu45\"><a href=\"#turkey\">Turkey</a></li>\r\n  <li class=\"eu46\"><a href=\"#ukraine\">Ukraine</a></li>\r\n  <li class=\"eu47\"><a href=\"#united-kingdom\">United Kingdom</a></li>\r\n<!-- \r\n  <li class=\"eu48\"><a href=\"#england\">England</a></li>\r\n  <li class=\"eu49\"><a href=\"#isle-of-man\">Isle of Man</a></li>\r\n  <li class=\"eu50\"><a href=\"#northern-ireland\">Northern Ireland</a></li>\r\n  <li class=\"eu51\"><a href=\"#scotland\">Scotland</a></li>\r\n  <li class=\"eu52\"><a href=\"#wales\">Wales</a></li>\r\n-->",
+                  "Map": "europe",
+                  "StylesheetName": "cssmap-europe",
+                  "StylesheetUrl": ""
+                },
+                "ContentIndexSettings": {},
+                "Map": "europe",
+                "Markup": null,
+                "Sizes": "[210,250]",
+                "Position": "1"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "ContinentsMap",
+          "DisplayName": "Continents Map",
+          "Settings": {
+            "Creatable": "False",
+            "Draftable": "True",
+            "Versionable": "True",
+            "Listable": "False",
+            "Securable": "True",
+            "Stereotype": "Widget"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "ContinentsMap",
+              "Name": "ContinentsMap",
+              "Settings": {
+                "Position": "0"
+              }
+            },
+            {
+              "PartName": "cssMapPart",
+              "Name": "cssMapPart",
+              "Settings": {
+                "Position": "1",
+                "DisplayName": null,
+                "Description": null,
+                "Editor": null,
+                "cssMapPartSettings": {
+                  "Sizes": [
+                    210,
+                    250,
+                    320,
+                    430,
+                    540,
+                    650,
+                    750,
+                    850,
+                    960,
+                    1280,
+                    1450
+                  ],
+                  "Markup": "  <li class=\"c1\"><a href=\"#africa\">Africa</a></li>\r\n  <li class=\"c2\"><a href=\"#asia\">Asia</a></li>\r\n  <li class=\"c3\"><a href=\"#australia\">Australia</a></li>\r\n  <li class=\"c4\"><a href=\"#europe\">Europe</a></li>\r\n  <li class=\"c5\"><a href=\"#north-america\">North America</a></li>\r\n  <li class=\"c6\"><a href=\"#south-america\">South America</a></li>",
+                  "Map": "continents",
+                  "StylesheetName": "cssmap-continents",
+                  "StylesheetUrl": ""
+                },
+                "ContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "AfricaMap",
+          "DisplayName": "Africa Map",
+          "Settings": {
+            "Creatable": "False",
+            "Draftable": "True",
+            "Versionable": "True",
+            "Listable": "False",
+            "Securable": "True",
+            "Stereotype": "Widget"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "AfricaMap",
+              "Name": "AfricaMap",
+              "Settings": {
+                "Position": "0"
+              }
+            },
+            {
+              "PartName": "cssMapPart",
+              "Name": "cssMapPart",
+              "Settings": {
+                "Position": "1",
+                "DisplayName": null,
+                "Description": null,
+                "Editor": null,
+                "cssMapPartSettings": {
+                  "Sizes": [
+                    250,
+                    320,
+                    430,
+                    540,
+                    650,
+                    750,
+                    850,
+                    960,
+                    1280,
+                    1450
+                  ],
+                  "Markup": "  <li class=\"afr1\"><a href=\"#algeria\">Algeria</a></li>\r\n  <li class=\"afr2\"><a href=\"#angola\">Angola</a></li>\r\n  <li class=\"afr3\"><a href=\"#benin\">Benin</a></li>\r\n  <li class=\"afr4\"><a href=\"#botswana\">Botswana</a></li>\r\n  <li class=\"afr5\"><a href=\"#burkina-faso\">Burkina Faso</a></li>\r\n  <li class=\"afr6\"><a href=\"#burundi\">Burundi</a></li>\r\n  <li class=\"afr7\"><a href=\"#cameroon\">Cameroon</a></li>\r\n  <li class=\"afr8\"><a href=\"#cape-verde\" class=\"tooltip-middle\">Cape Verde <small>(Portugal)</small></a></li>\r\n  <li class=\"afr9\"><a href=\"#canary-islands\" class=\"tooltip-middle\">Canary Islands <small>(Spain)</small></a></li>\r\n  <li class=\"afr10\"><a href=\"#central-african-republic\">Central African Republic</a></li>\r\n  <li class=\"afr11\"><a href=\"#chad\">Chad</a></li>\r\n  <li class=\"afr12\"><a href=\"#comoros\" class=\"tooltip-middle\">Comoros</a></li>\r\n  <li class=\"afr13\"><a href=\"#congo\">Congo</a></li>\r\n  <li class=\"afr14\"><a href=\"#cote-d-ivoire\">Côte d'Ivoire</a></li>\r\n  <li class=\"afr15\"><a href=\"#democratic-republic-of-the-congo\">Democratic Republic of the Congo</a></li>\r\n  <li class=\"afr16\"><a href=\"#djibouti\">Djibouti</a></li>\r\n  <li class=\"afr17\"><a href=\"#egypt\">Egypt</a></li>\r\n  <li class=\"afr18\"><a href=\"#equatorial-guinea\">Equatorial Guinea</a></li>\r\n  <li class=\"afr19\"><a href=\"#eritrea\">Eritrea</a></li>\r\n  <li class=\"afr20\"><a href=\"#ethiopia\">Ethiopia</a></li>\r\n  <li class=\"afr21\"><a href=\"#gabon\">Gabon</a></li>\r\n  <li class=\"afr22\"><a href=\"#gambia\">Gambia</a></li>\r\n  <li class=\"afr23\"><a href=\"#ghana\">Ghana</a></li>\r\n  <li class=\"afr24\"><a href=\"#guinea\">Guinea</a></li>\r\n  <li class=\"afr25\"><a href=\"#guinea-bisaau\">Guinea-Bisaau</a></li>\r\n  <li class=\"afr26\"><a href=\"#kenya\">Kenya</a></li>\r\n  <li class=\"afr27\"><a href=\"#lesotho\">Lesotho</a></li>\r\n  <li class=\"afr28\"><a href=\"#liberia\">Liberia</a></li>\r\n  <li class=\"afr29\"><a href=\"#libya\">Libya</a></li>\r\n  <li class=\"afr30\"><a href=\"#madagascar\">Madagascar</a></li>\r\n  <li class=\"afr31\"><a href=\"#madeira\" class=\"tooltip-middle\">Madeira <small>(Portugal)</small></a></li>\r\n  <li class=\"afr32\"><a href=\"#malawi\">Malawi</a></li>\r\n  <li class=\"afr33\"><a href=\"#mali\">Mali</a></li>\r\n  <li class=\"afr34\"><a href=\"#mauritania\">Mauritania</a></li>\r\n  <li class=\"afr35\"><a href=\"#mauritius\">Mauritius</a></li>\r\n  <li class=\"afr36\"><a href=\"#mayotte\">Mayotte <small>(France)</small></a></li>\r\n  <li class=\"afr37\"><a href=\"#morocco\">Morocco</a></li>\r\n  <li class=\"afr38\"><a href=\"#mozambique\">Mozambique</a></li>\r\n  <li class=\"afr39\"><a href=\"#namibia\">Namibia</a></li>\r\n  <li class=\"afr40\"><a href=\"#niger\">Niger</a></li>\r\n  <li class=\"afr41\"><a href=\"#nigeria\">Nigeria</a></li>\r\n  <li class=\"afr42\"><a href=\"#reunion\">Réunion <small>(France)</small></a></li>\r\n  <li class=\"afr43\"><a href=\"#rwanda\">Rwanda</a></li>\r\n  <li class=\"afr44\"><a href=\"#sahrawi-arab-democratic-republic\">Sahrawi Arab Democratic Republic</a></li>\r\n  <li class=\"afr45\"><a href=\"#sao-tome-and-principe\" class=\"tooltip-middle\">São Tomé and Príncipe</a></li>\r\n  <li class=\"afr46\"><a href=\"#senegal\">Senegal</a></li>\r\n  <li class=\"afr47\"><a href=\"#seychelles\" class=\"tooltip-middle\">Seychelles</a></li>\r\n  <li class=\"afr48\"><a href=\"#sierra-leone\">Sierra Leone</a></li>\r\n  <li class=\"afr49\"><a href=\"#somalia\">Somalia</a></li>\r\n  <li class=\"afr50\"><a href=\"#somaliland\">Somaliland</a></li>\r\n  <li class=\"afr51\"><a href=\"#south-africa\">South Africa</a></li>\r\n  <li class=\"afr52\"><a href=\"#south-sudan\">South Sudan</a></li>\r\n  <li class=\"afr53\"><a href=\"#sudan\">Sudan</a></li>\r\n  <li class=\"afr54\"><a href=\"#swaziland\">Swaziland</a></li>\r\n  <li class=\"afr55\"><a href=\"#togo\">Togo</a></li>\r\n  <li class=\"afr56\"><a href=\"#tunisia\">Tunisia</a></li>\r\n  <li class=\"afr57\"><a href=\"#uganda\">Uganda</a></li>\r\n  <li class=\"afr58\"><a href=\"#united-republic-of-tanzania\">United Republic of Tanzania</a></li>\r\n  <li class=\"afr59\"><a href=\"#zambia\">Zambia</a></li>\r\n  <li class=\"afr60\"><a href=\"#zimbabwe\">Zimbabwe</a></li>",
+                  "Map": "africa",
+                  "StylesheetName": "cssmap-africa",
+                  "StylesheetUrl": ""
+                },
+                "ContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "AustraliaMap",
+          "DisplayName": "Australia Map",
+          "Settings": {
+            "Creatable": "False",
+            "Draftable": "True",
+            "Versionable": "True",
+            "Listable": "False",
+            "Securable": "True",
+            "Stereotype": "Widget"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "AustraliaMap",
+              "Name": "AustraliaMap",
+              "Settings": {
+                "Position": "0"
+              }
+            },
+            {
+              "PartName": "cssMapPart",
+              "Name": "cssMapPart",
+              "Settings": {
+                "Position": "1",
+                "DisplayName": null,
+                "Description": null,
+                "Editor": null,
+                "cssMapPartSettings": {
+                  "Sizes": [
+                    210,
+                    320,
+                    430,
+                    540,
+                    650,
+                    750,
+                    850,
+                    960,
+                    1280
+                  ],
+                  "Markup": "  <li class=\"au1\"><a href=\"#canberra\">Canberra</a></li>\r\n  <li class=\"au2\"><a href=\"#new-south-wales\">New South Wales</a></li>\r\n  <li class=\"au3\"><a href=\"#northern-territory\">Northern Territory</a></li>\r\n  <li class=\"au4\"><a href=\"#queensland\">Queensland</a></li>\r\n  <li class=\"au5\"><a href=\"#south-australia\">South Australia</a></li>\r\n  <li class=\"au6\"><a href=\"#tasmania\">Tasmania</a></li>\r\n  <li class=\"au7\"><a href=\"#victoria\">Victoria</a></li>\r\n  <li class=\"au8\"><a href=\"#western-australia\">Western Australia</a></li>",
+                  "Map": "australia",
+                  "StylesheetName": "cssmap-australia",
+                  "StylesheetUrl": ""
+                },
+                "ContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "PolandMap",
+          "DisplayName": "Poland Map",
+          "Settings": {
+            "Creatable": "False",
+            "Draftable": "True",
+            "Versionable": "True",
+            "Listable": "False",
+            "Securable": "True",
+            "Stereotype": "Widget"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "PolandMap",
+              "Name": "PolandMap",
+              "Settings": {
+                "Position": "0"
+              }
+            },
+            {
+              "PartName": "cssMapPart",
+              "Name": "cssMapPart",
+              "Settings": {
+                "Position": "1",
+                "DisplayName": null,
+                "Description": null,
+                "Editor": null,
+                "cssMapPartSettings": {
+                  "Sizes": [
+                    210,
+                    250,
+                    320,
+                    430,
+                    540,
+                    650,
+                    750,
+                    850,
+                    960
+                  ],
+                  "Markup": "  <li class=\"pl1\"><a href=\"#dolnoslaskie\">Dolnośląskie</a></li>\r\n  <li class=\"pl2\"><a href=\"#kujawsko-pomorskie\">Kujawsko-pomorskie</a></li>\r\n  <li class=\"pl3\"><a href=\"#lubelskie\">Lubelskie</a></li>\r\n  <li class=\"pl4\"><a href=\"#lubuskie\">Lubuskie</a></li>\r\n  <li class=\"pl5\"><a href=\"#lodzkie\">Łódzkie</a></li>\r\n  <li class=\"pl6\"><a href=\"#malopolskie\">Małopolskie</a></li>\r\n  <li class=\"pl7\"><a href=\"#mazowieckie\">Mazowieckie</a></li>\r\n  <li class=\"pl8\"><a href=\"#opolskie\">Opolskie</a></li>\r\n  <li class=\"pl9\"><a href=\"#podkarpackie\">Podkarpackie</a></li>\r\n  <li class=\"pl10\"><a href=\"#podlaskie\">Podlaskie</a></li>\r\n  <li class=\"pl11\"><a href=\"#pomorskie\">Pomorskie</a></li>\r\n  <li class=\"pl12\"><a href=\"#slaskie\">Śląskie</a></li>\r\n  <li class=\"pl13\"><a href=\"#swietokrzyskie\">Świętokrzyskie</a></li>\r\n  <li class=\"pl14\"><a href=\"#warminsko-mazurskie\">Warmińsko-mazurskie</a></li>\r\n  <li class=\"pl15\"><a href=\"#wielkopolskie\">Wielkopolskie</a></li>\r\n  <li class=\"pl16\"><a href=\"#zachodniopomorskie\">Zachodniopomorskie</a></li>",
+                  "Map": "poland",
+                  "StylesheetName": "cssmap-poland",
+                  "StylesheetUrl": ""
+                },
+                "ContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "SouthAmericaMap",
+          "DisplayName": "South America Map",
+          "Settings": {
+            "Creatable": "False",
+            "Draftable": "True",
+            "Versionable": "True",
+            "Listable": "False",
+            "Securable": "True",
+            "Stereotype": "Widget"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "SouthAmericaMap",
+              "Name": "SouthAmericaMap",
+              "Settings": {
+                "Position": "0"
+              }
+            },
+            {
+              "PartName": "cssMapPart",
+              "Name": "cssMapPart",
+              "Settings": {
+                "Position": "1",
+                "DisplayName": null,
+                "Description": null,
+                "Editor": null,
+                "cssMapPartSettings": {
+                  "Sizes": [
+                    150,
+                    210,
+                    320,
+                    430,
+                    540,
+                    650,
+                    750,
+                    850,
+                    960
+                  ],
+                  "Markup": "  <li class=\"sam1\"><a href=\"#argentina\">Argentina</a></li>\r\n  <li class=\"sam2\"><a href=\"#bolivia\">Bolivia</a></li>\r\n  <li class=\"sam3\"><a href=\"#brazil\">Brazil</a></li>\r\n  <li class=\"sam4\"><a href=\"#chile\">Chile</a></li>\r\n  <li class=\"sam5\"><a href=\"#colombia\">Colombia</a></li>\r\n  <li class=\"sam6\"><a href=\"#ecuador\">Ecuador</a></li>\r\n  <li class=\"sam7\"><a href=\"#guyana\">Guyana</a></li>\r\n  <li class=\"sam8\"><a href=\"#french-guiana\">Guyane <small>(French Guiana)</small></a></li>\r\n  <li class=\"sam9\"><a href=\"#paraguay\">Paraguay</a></li>\r\n  <li class=\"sam10\"><a href=\"#peru\">Peru</a></li>\r\n  <li class=\"sam11\"><a href=\"#suriname\">Suriname</a></li>\r\n  <li class=\"sam12\"><a href=\"#uruguay\">Uruguay</a></li>\r\n  <li class=\"sam13\"><a href=\"#venezuela\">Venezuela</a></li>\r\n  <li class=\"sam14\"><a href=\"#falkland-islands\">Falkland Islands</a></li>",
+                  "Map": "south-america",
+                  "StylesheetName": "cssmap-south-america",
+                  "StylesheetUrl": ""
+                },
+                "ContentIndexSettings": {}
+              }
+            }
+          ]
+        }
+      ],
+      "ContentParts": []
+    }
+  ]
+}

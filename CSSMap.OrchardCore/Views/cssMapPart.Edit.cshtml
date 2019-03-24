@@ -13,8 +13,12 @@
 <fieldset class="form-group" asp-validation-class-for="Size">
     <label asp-for="Size">@T["Size"]</label>
     <select asp-for="Size" class="form-control content-preview-select">
-        @foreach (var size in Model.Settings.Sizes) {
+        @if (Model.Settings.Sizes != null)
+        {
+            foreach (var size in Model.Settings.Sizes)
+            {
         <option value="@size">@size px</option>
+            }
         }
     </select>
     <span class="hint">@T["Select the size of the map"]</span>
@@ -23,7 +27,7 @@
 <fieldset class="form-group" asp-validation-class-for="Markup">
     <label asp-for="Markup">@T["Markup"]</label>
     <div class="input-group">
-        <textarea asp-for="Markup" class="form-control content-preview-text" rows="10" />
+        <textarea asp-for="Markup" class="form-control content-preview-text" rows="10" ></textarea>
         <span asp-validation-for="Markup"></span>
     </div>
     <span class="hint">@T["The markup used to draw the map."]</span>
@@ -32,7 +36,7 @@
 <fieldset class="form-group" asp-validation-class-for="Options">
     <label asp-for="Options">@T["Options"]</label>
     <div class="input-group">
-        <textarea asp-for="Options" class="form-control content-preview-text" rows="10" />
+        <textarea asp-for="Options" class="form-control content-preview-text" rows="10" ></textarea>
         <span asp-validation-for="Options"></span>
     </div>
     <span class="hint">@T["The initialization options for the map."]</span>
@@ -42,7 +46,7 @@
 <fieldset class="form-group" asp-validation-class-for="AdditionalMarkup">
     <label asp-for="AdditionalMarkup">@T["Additional Markup"]</label>
     <div class="input-group">
-        <textarea asp-for="AdditionalMarkup" class="form-control content-preview-text" rows="10" />
+        <textarea asp-for="AdditionalMarkup" class="form-control content-preview-text" rows="10" ></textarea>
         <span asp-validation-for="AdditionalMarkup"></span>
     </div>
     <span class="hint">@T["The additional markup used to draw the map.You should set the options also"]</span>

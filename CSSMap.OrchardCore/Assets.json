@@ -10,6 +10,26 @@
   },
 
   {
+    "inputs": [ "Assets/cssmap-africa/cssmap-africa.css" ],
+    "output": "wwwroot/Styles/cssmap-africa.css"
+  },
+  {
+    "copy": true,
+    "inputs": [ "Assets/cssmap-africa/**/*" ],
+    "output": "wwwroot/Styles/@"
+  },
+
+  {
+    "inputs": [ "Assets/cssmap-australia/cssmap-australia.css" ],
+    "output": "wwwroot/Styles/cssmap-australia.css"
+  },
+  {
+    "copy": true,
+    "inputs": [ "Assets/cssmap-australia/**/*" ],
+    "output": "wwwroot/Styles/@"
+  },
+
+  {
     "inputs": [ "Assets/cssmap-continents/cssmap-continents.css" ],
     "output": "wwwroot/Styles/cssmap-continents.css"
   },
@@ -18,17 +38,34 @@
     "inputs": [ "Assets/cssmap-continents/**/*" ],
     "output": "wwwroot/Styles/@"
   },
+
   {
     "inputs": [ "Assets/cssmap-europe/cssmap-europe.css" ],
     "output": "wwwroot/Styles/cssmap-europe.css"
   },
   {
-    "inputs": [ "Assets/cssmap-europe/cssmap-themes.css" ],
-    "output": "wwwroot/Styles/cssmap-themes.css"
+    "copy": true,
+    "inputs": [ "Assets/cssmap-europe/**/*" ],
+    "output": "wwwroot/Styles/@"
+  },
+
+  {
+    "inputs": [ "Assets/cssmap-poland/cssmap-poland.css" ],
+    "output": "wwwroot/Styles/cssmap-poland.css"
   },
   {
     "copy": true,
-    "inputs": [ "Assets/cssmap-europe/**/*" ],
+    "inputs": [ "Assets/cssmap-poland/**/*" ],
+    "output": "wwwroot/Styles/@"
+  },
+
+  {
+    "inputs": [ "Assets/cssmap-south-america/cssmap-south-america.css" ],
+    "output": "wwwroot/Styles/cssmap-south-america.css"
+  },
+  {
+    "copy": true,
+    "inputs": [ "Assets/cssmap-south-america/**/*" ],
     "output": "wwwroot/Styles/@"
   }
 

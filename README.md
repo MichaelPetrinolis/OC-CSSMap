@@ -8,7 +8,7 @@ Integrate CSS Map widgets in Orchard Core
 
 Just add a widget to a Content Type that supports widgets. 
 
-Enable the module ![Install Module](modules.png)
+Enable the module ![Install Module](modules.PNG)
 
 Add a map Widget ![Add Widget](addWidget.png)
 

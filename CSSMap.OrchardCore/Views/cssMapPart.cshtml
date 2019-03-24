@@ -1,0 +1,45 @@
+﻿@model CSSMap.OrchardCore.ViewModels.cssMapPartViewModel
+@inject OrchardCore.Liquid.ISlugService SlugService
+
+@{
+    var id = SlugService.Slugify(Model.Id);
+    var additionalId = id + "-additional";
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.Settings.StylesheetName))
+{
+    <style asp-name="@Model.Settings.StylesheetName"></style>
+}
+else
+{
+    <style asp-src="@Model.Settings.StylesheetUrl"></style>
+}
+
+<section class="flow">
+    <div id="@id" style="display:none;">
+        <ul class="@Model.Settings.Map">
+            @Html.Raw(Model.Markup)
+        </ul>
+    </div>
+    @if (!string.IsNullOrWhiteSpace(Model.AdditionalMarkup))
+    {
+        <div id="@additionalId">
+            <ul>
+                @Html.Raw(Model.AdditionalMarkup)
+            </ul>
+        </div>
+    }
+</section>
+
+<script asp-name="CSSMap" at="Foot"></script>
+
+<script at="Foot">
+$(document).ready(function(){
+    $("#@id").CSSMap({
+            size: @Model.Size @if (!string.IsNullOrWhiteSpace(Model.Options)) {
+                @:, @Html.Raw(Model.Options)
+            }
+	});
+    $("#@id").css('display', 'block')
+});
+</script>

@@ -1,7 +1,7 @@
 using CSSMap.OrchardCore.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace CSSMap.OrchardCore.ViewModels
+namespace CSSMap.OrchardCore.Settings
 {
     public class cssMapPartSettingsViewModel
     {

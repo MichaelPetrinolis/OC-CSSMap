@@ -18,7 +18,7 @@ namespace CSSMap.OrchardCore
         public override void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddScoped<IContentPartDisplayDriver, cssMapPartDisplay>();
+            services.AddScoped<IContentPartDisplayDriver, cssMapPartDisplayDriver>();
             services.AddSingleton<ContentPart, cssMapPart>();
             services.AddScoped<IContentPartHandler, cssMapPartHandler>();
             services.AddScoped<IContentTypePartDefinitionDisplayDriver, cssMapPartSettingsDisplayDriver>();

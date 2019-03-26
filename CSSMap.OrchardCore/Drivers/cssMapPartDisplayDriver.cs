@@ -13,23 +13,24 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using OrchardCore.ContentManagement.Display.Models;
+using CSSMap.OrchardCore.Settings;
 
 namespace CSSMap.OrchardCore.Drivers
 {
-    public class cssMapPartDisplay : ContentPartDisplayDriver<cssMapPart>
+    public class cssMapPartDisplayDriver : ContentPartDisplayDriver<cssMapPart>
     {
         private readonly IContentDefinitionManager _contentDefinitionManager;
         private readonly ISiteService _siteService;
         private readonly IAuthorizationService _authorizationService;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        private readonly IStringLocalizer<cssMapPartDisplay> T;
+        private readonly IStringLocalizer<cssMapPartDisplayDriver> T;
 
-        public cssMapPartDisplay(
+        public cssMapPartDisplayDriver(
             IContentDefinitionManager contentDefinitionManager,
             ISiteService siteService,
             IAuthorizationService authorizationService,
             IHttpContextAccessor httpContextAccessor,
-            IStringLocalizer<cssMapPartDisplay> localizer
+            IStringLocalizer<cssMapPartDisplayDriver> localizer
             )
         {
             _contentDefinitionManager = contentDefinitionManager;
@@ -44,7 +45,7 @@ namespace CSSMap.OrchardCore.Drivers
             return Initialize<cssMapPartViewModel>("cssMapPart", m =>
             {
                 m.cssMapPart = part;
-                m.Settings = GetSettings(part);
+                m.Settings = GetcssMapPartSettings(part);
                 m.AdditionalMarkup = part.AdditionalMarkup;
                 m.Id = part.Id;
                 m.Markup = part.Markup;
@@ -59,27 +60,23 @@ namespace CSSMap.OrchardCore.Drivers
         {
             return Initialize<cssMapPartViewModel>("cssMapPart_Edit", model =>
             {
-                model.Settings = GetSettings(part);
+                model.Settings = GetcssMapPartSettings(part);
 
                 model.AdditionalMarkup = part.AdditionalMarkup;
                 model.cssMapPart = part;
                 model.Id = part.Id;
-                model.Markup = string.IsNullOrWhiteSpace(part.Markup) ? model.Settings.Markup : part.Markup;
+                model.Markup = part.Markup;
                 model.Options = part.Options;
                 model.Size = part.Size;
 
             });
         }
 
-        private cssMapPartSettings GetSettings(cssMapPart part)
+        private cssMapPartSettings GetcssMapPartSettings(cssMapPart part)
         {
             var contentTypeDefinition = _contentDefinitionManager.GetTypeDefinition(part.ContentItem.ContentType);
             var contentTypePartDefinition = contentTypeDefinition.Parts.FirstOrDefault(x => String.Equals(x.PartDefinition.Name, nameof(cssMapPart), StringComparison.Ordinal));
-            Newtonsoft.Json.Linq.JToken settings;
-            if (contentTypePartDefinition.Settings.TryGetValue(nameof(cssMapPartSettings), out settings))
-                return settings.ToObject<cssMapPartSettings>();
-            else
-                return new cssMapPartSettings();
+            return contentTypePartDefinition.GetSettings<cssMapPartSettings>();
         }
 
         public override async Task<IDisplayResult> UpdateAsync(cssMapPart model, IUpdateModel updater)
@@ -100,12 +97,7 @@ namespace CSSMap.OrchardCore.Drivers
 
         private Task ValidateAsync(cssMapPart model, IUpdateModel updater)
         {
-            var settings = GetSettings(model);
-
-            //if (string.IsNullOrWhiteSpace(model.Id))
-            //{
-            //    updater.ModelState.AddModelError(Prefix, nameof(model.Id), T["You must set an Id for the map"]);
-            //}
+            var settings = GetcssMapPartSettings(model);
 
             if (settings.Sizes != null)
             {

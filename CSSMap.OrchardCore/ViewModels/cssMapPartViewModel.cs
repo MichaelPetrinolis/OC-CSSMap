@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using CSSMap.OrchardCore.Models;
 using System.ComponentModel.DataAnnotations;
+using CSSMap.OrchardCore.Settings;
 
 namespace CSSMap.OrchardCore.ViewModels
 {

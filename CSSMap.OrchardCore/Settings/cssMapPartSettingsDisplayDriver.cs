@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using CSSMap.OrchardCore.Models;
+using CSSMap.OrchardCore.Settings;
 using CSSMap.OrchardCore.ViewModels;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Localization;
@@ -31,7 +32,7 @@ namespace cssMap.OrchardCore.Settings
 
             return Initialize<cssMapPartSettingsViewModel>("cssMapPartSettings_Edit", model =>
             {
-                model.cssMapPartSettings = GetSettings(contentTypePartDefinition);
+                model.cssMapPartSettings = contentTypePartDefinition.GetSettings<cssMapPartSettings>();
                 model.Map = model.cssMapPartSettings.Map;
                 model.Markup = model.cssMapPartSettings.Markup;
                 model.Sizes = model.cssMapPartSettings.Sizes == null ? null : string.Join(",", model.cssMapPartSettings.Sizes);
@@ -95,13 +96,6 @@ namespace cssMap.OrchardCore.Settings
             }
             return Edit(contentTypePartDefinition, context.Updater);
         }
-        private cssMapPartSettings GetSettings(ContentTypePartDefinition contentTypePartDefinition)
-        {
-            JToken settings;
-            if (contentTypePartDefinition.Settings.TryGetValue(nameof(cssMapPartSettings), out settings))
-                return settings.ToObject<cssMapPartSettings>();
-            else
-                return new cssMapPartSettings();
-        }
+
     }
 }

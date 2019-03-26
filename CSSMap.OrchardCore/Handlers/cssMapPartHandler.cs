@@ -1,4 +1,5 @@
 using CSSMap.OrchardCore.Models;
+using CSSMap.OrchardCore.Settings;
 using OrchardCore.ContentManagement;
 using OrchardCore.ContentManagement.Handlers;
 using OrchardCore.ContentManagement.Metadata;
@@ -23,30 +24,21 @@ namespace cssMap.OrchardCore.Handlers
             _siteService = siteService;
         }
 
-        public override Task CreatingAsync(CreateContentContext context, cssMapPart instance)
+        public override Task InitializingAsync(InitializingContentContext context, cssMapPart part)
         {
-            var settings = GetSettings(instance);
-            instance.Markup = settings.Markup;
-            instance.Apply();
-            return Task.CompletedTask;
-        }
-
-        public override Task CreatedAsync(CreateContentContext context, cssMapPart instance)
-        {
-            var settings = GetSettings(instance);
-            instance.Markup = settings.Markup;
-            instance.Apply();
+            var settings = GetcssMapPartSettings(part);
+            part.Markup = settings.Markup;
             return Task.CompletedTask;
         }
 
         /// <summary>
         /// Get the pattern from the AutoroutePartSettings property for its type
         /// </summary>
-        private cssMapPartSettings GetSettings(cssMapPart part)
+        private cssMapPartSettings GetcssMapPartSettings(cssMapPart part)
         {
             var contentTypeDefinition = _contentDefinitionManager.GetTypeDefinition(part.ContentItem.ContentType);
             var contentTypePartDefinition = contentTypeDefinition.Parts.FirstOrDefault(x => String.Equals(x.PartDefinition.Name, nameof(cssMapPart), StringComparison.Ordinal));
-            return contentTypePartDefinition.Settings.GetValue(nameof(cssMapPartSettings)).ToObject<cssMapPartSettings>();
+            return contentTypePartDefinition.GetSettings<cssMapPartSettings>();
         }
 
     }
